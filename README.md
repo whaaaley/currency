@@ -1,6 +1,15 @@
 
 # Currency Exchange (Code Challenge)
 
+[View site here](https://currency-challenge.netlify.app/)
+
+## Build
+
+```
+$ npm i
+$ npm run dev
+```
+
 ## Prioritize Requirements
 1. As a user, I should see a list of currencies that I can convert my money from.
 1. As a user, I should be able to select 1 or more output currencies.
