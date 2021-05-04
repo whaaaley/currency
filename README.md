@@ -37,4 +37,4 @@ After finishing the frontend I went back to work on setting up Laravel, but was 
  - Start time 7:30 AM
  - Finished frontend + API stuff 9:30 AM
  - Research Laravel + Docker
- - End time 11:00 AM
+ - End time 12:00 PM
