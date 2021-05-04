@@ -162,8 +162,6 @@ query {
       state.persist.currencyListRaw = currencies
       state.currencyList = formatCurrencyList(currencies)
 
-      console.log('>>>', state.currencyList);
-
       // Update persisted data
       persistData(state.persist)
     })
