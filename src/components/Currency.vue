@@ -10,14 +10,14 @@
         <input v-model="state.fromAmount" type="number" placeholder="Input Amount ex: 1.00">
         <select v-model="state.fromCurrency">
           <option value="" disabled>From Currency</option>
-          <option v-for="(value, key) in state.persist.currencyList" :value="key">{{ value }}</option>
+          <option v-for="(value, key) in state.currencyList" :value="key">{{ value }}</option>
         </select>
       </div>
 
       <div class="add-currency">
         <select v-model="state.toCurrency">
           <option value="" disabled>To Currency</option>
-          <option v-for="(value, key) in state.persist.currencyList" :value="key">{{ value }}</option>
+          <option v-for="(value, key) in state.currencyList" :value="key">{{ value }}</option>
         </select>
         <button @click="addCurrency()">Add Currency</button>
       </div>
@@ -74,7 +74,7 @@ const state = reactive({
   exchangeListLoading: false,
 
   currencyListRestored: false,
-  currencyList: null,
+  currencyList: [],
 
   persist: reactive({
     currencyListRaw: null
@@ -161,6 +161,8 @@ query {
       // Add currencies to state
       state.persist.currencyListRaw = currencies
       state.currencyList = formatCurrencyList(currencies)
+
+      console.log('>>>', state.currencyList);
 
       // Update persisted data
       persistData(state.persist)
