@@ -227,7 +227,10 @@ onMounted(() => {
 
   if (data != null) {
     state.persist = JSON.parse(data)
+
     state.currencyListRestored = true
+    state.currencyList = formatCurrencyList(state.persist.currencyListRaw)
+
     console.log('>>> [restoreData] data has been restored')
   } else {
     fetchCurrencyList()
