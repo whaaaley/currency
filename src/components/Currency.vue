@@ -236,7 +236,7 @@ onMounted(() => {
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   h1 {
     font: 600 36px/1 sans-serif;
   }

@@ -7,7 +7,7 @@
   import Currency from './components/Currency.vue'
 </script>
 
-<style>
+<style lang="scss">
   /**
   * Pseudo Elements
   */
